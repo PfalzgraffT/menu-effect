@@ -1,0 +1,14 @@
+<div class="container">
+  <%#= video_tag "world.webm", autoplay: :autoplay, loop: :loop, muted: :muted, class: "myVideo" %>
+  <%= video_tag "beach.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "myVideo" %>
+      <div class="social"><%= link_to (image_tag "wordpress.svg", class: "wordpress"), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedin.svg", class: "linkedin"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+      <div class="dropdown-items hover">
+        <h5>A découvrir</h5>
+        <ul><li><% @destinations.each do |destination| %>- <%= link_to destination.name, destination_path(destination) %> -<% end %></li></ul>
+      </div>
+    <div class="first-container">
+      <div class="border1-bottom"></div>
+      <div class="title">Autour du monde</div>
+      <div class="border2-bottom"></div>
+    </div>
+</div>

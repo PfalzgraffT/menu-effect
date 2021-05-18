@@ -1,0 +1,156 @@
+<div class="container">
+  <%= image_tag "maldive.jpg", class: "myVideo" %>
+  <div class="social"><%= link_to (image_tag "wordpress.svg", class: "wordpress"), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedin.svg", class: "linkedin"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+  <div class="dropdown-show">
+    <h5><%= link_to "Tour du monde", destinations_path %></h5>
+  </div>
+  <div class="first-container">
+    <div class="border1-bottom"></div>
+    <div class="title show"><%= @destination.name %><h4>Asie du sud</h4>
+      <button onClick="window.location.reload()" class="btn"><%= link_to "A propos", "#ancre", class:"btn-propos" %></button>
+    </div>
+    <div class="border2-bottom"></div>
+  </div>
+</div>
+
+
+
+
+<div id="ancre" class="container">
+  <div class="border_bottom"></div>
+  <div class="second-container">
+    <%= image_tag "tache.png", class: "tache"%>
+    <div class="text">
+      <h1><%= @destination.name %></h1>
+      <div class="description"> <%= @destination.description %></div>
+    </div>
+    <div><%= image_tag "vue.jpg", class: "img-show" %></div>
+  </div>
+</div>
+
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+
+
+
+
+
+
+
+<div class="container to-discover">
+  <div class=" text decouvrir">
+    <span style="display: flex; justify-content: center; font-size: 2em; position: relative; font-family: 'Stardos Stencil';">A découvrir</span>
+  </div>
+</div>
+<div class="container discover">
+  <div class="third-container">
+    <div class="cards card-1"><%=  (image_tag "tortue.jpg", class: "img" ) %><div class="diving">Plongée</div></div>
+    <div class="cards card-2"><%=  (image_tag "beach2.jpg", class: "img" ) %><div class="plage">Plage</div></div>
+    <div class="cards card-3"><%=  (image_tag "activity.jpg", class: "img" ) %><div class="activite">Activités</div></div>
+    <div class="cards card-4"><%=  (image_tag "love.jpg", class: "img" ) %><div class="lunedemiel">Lune de Miel</div></div>
+  </div>
+  <div class="border_bottom" style="height: 90%; z-index: -1;"></div>
+</div>
+
+
+
+
+
+<div id= "plongee" class="container plonge">
+
+  <div class="title-plongee">
+    <%= image_tag "tache.png", class: "tache"%>
+    <%= image_tag "turtle.jpg", style: "object-fit: cover; height: -webkit-fill-available; position: absolute; z-index: -1; width: 100%; border-radius: 1em;" %>Plongée
+  </div>
+  <div class="text-right">
+  <%#= video_tag "diving.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "vid-diving" %>
+  <%= image_tag "diving-maldives.jpg",class: "vid-diving"%>
+    <h1>Découvrir la biodiversité locale</h1>
+    <div class="description-diving">La vie marine est remarquable notamment en raison de la présence d'espèces pélagiques telles que les requins baleines ou les raies manta. On y rencontre aussi en abondance des raies aigles, des requins de récif, des napoléons, des tortues marines ainsi que de nombreuses espèces de poissons et de coraux.</div>
+  </div>
+  <div class="social-diving"><%= link_to (image_tag "wordpressblack.svg", style: "height: 2em; padding-right: 1em" ), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedinblack.svg", style: "height: 2em;"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+  <div class="border_bottom_plonge"></div>
+</div>
+
+
+
+
+
+<div id= "beach" class="container beac">
+  <div class="title-plongee">
+    <%= image_tag "tache.png", class: "tache"%>
+    <%= image_tag "plage.jpg", style: "object-fit: cover; height: -webkit-fill-available; position: absolute; z-index: -1; width: 100%; border-radius: 1em;" %>Plage
+  </div>
+  <div class="text-left">
+  <%#= video_tag "beach.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "vid-beach" %>
+  <%= image_tag "beach3.jpg",class: "vid-beach"%>
+    <h1>Découvrir les plages de sable fin</h1>
+    <div class="description-diving">Cet archipel composé de plus de mille iles coralliennes est un véritable coin édénique. Des lagons aux eaux cristallines, un écosystème tant florissant que dynamique et des plages spectaculaires (idéales pour des journées de farniente). </div>
+  </div>
+  <div class="social-beach"><%= link_to (image_tag "wordpressblack.svg", style: "height: 2em; padding-right: 1em" ), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedinblack.svg", style: "height: 2em;"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+  <div class="border_bottom_plonge"></div>
+</div>
+
+
+
+
+
+<div id= "activity" class="container activit">
+  <div class="title-plongee">
+    <%= image_tag "tache.png", class: "tache"%>
+    <%= image_tag "activity.jpg", style: "object-fit: cover; height: -webkit-fill-available; position: absolute; z-index: -1; width: 100%; border-radius: 1em;" %>Activités
+  </div>
+  <div class="text-right acti">
+  <%#= video_tag "activity.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "vid-activity" %>
+  <%= image_tag "activity2.jpg",class: "vid-activity"%>
+    <h1>Activités en environnement de rêve</h1>
+    <div class="description-diving">Les activités se déroulent dans un luxe incomparable. Au bord d’une plage de sable fin, réservée aux seuls invités de l’île-hôtel, on vit ses vacances comme au paradis. Baignade dans le lagon turquoise, snorkeling avec masque et tuba depuis la terrasse des villas sur pilotis aux Maldives, kitesurf, kayak, jet-ski...</div>
+  </div>
+  <div class="social-activity"><%= link_to (image_tag "wordpressblack.svg", style: "height: 2em; padding-right: 1em" ), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedinblack.svg", style: "height: 2em;"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+  <div class="border_bottom_plonge"></div>
+</div>
+
+
+
+
+
+<div id= "honeymoon" class="container honeymoo">
+  <div class="title-plongee">
+    <%= image_tag "tache.png", class: "tache"%>
+    <%= image_tag "lunedemiel.jpg", style: "object-fit: cover; height: -webkit-fill-available; position: absolute; z-index: -1; width: 100%; border-radius: 1em;" %>Lune de Miel
+  </div>
+  <div class="text-left honey">
+  <%#= video_tag "love.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "vid-honeymoon" %>
+  <%= image_tag "honeymoon.jpg",class: "vid-honeymoon"%>
+    <h1>L'amour au paradis sur Terre</h1>
+    <div class="description-diving">Un voyage de noces aux Maldives est l’occasion de prendre soin de soi, et de profiter de l’instant présent à deux. Mer turquoise et sable blanc à couper le souffle, faune et flore incroyables, barrières de corail, raies géantes, requins baleines, pêche au gros, les Maldives offrent un décor idyllique pour se retrouver en toute intimité en tant que mari et femme.</div>
+  </div>
+  <div class="social-honeymoon"><%= link_to (image_tag "wordpressblack.svg", style: "height: 2em; padding-right: 1em" ), "https://thomasdev400243281.wordpress.com", :target => "blank" %><%= link_to (image_tag "linkedinblack.svg", style: "height: 2em;"), "https://www.linkedin.com/in/thomas-pfalzgraff-11a3451b6/", :target => "_blank" %></div>
+  <div class="border_bottom_plonge"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+    //Check if the current URL contains '# or hash'
+    if(document.URL.indexOf("#")==-1){
+        // Set the URL to whatever it was plus "#loaded".
+        url = document.URL+"#loaded";
+        location = "#loaded";
+        //Reload the page using reload() method
+        location.reload(true);
+    }
+});
+</script>

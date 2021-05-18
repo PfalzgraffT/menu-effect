@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AroundTheWorld</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".card-1").click(function(){
+          $("#plongee").fadeToggle("8000");
+          $("#beach").hide();
+          $("#activity").hide();
+          $("#honeymoon").hide();
+        });
+      });
+      $(document).ready(function(){
+        $(".card-2").click(function(){
+          $("#plongee").hide();
+          $("#beach").fadeToggle("8000");
+          $("#activity").hide();
+          $("#honeymoon").hide();
+        });
+      });
+      $(document).ready(function(){
+        $(".card-3").click(function(){
+          $("#plongee").hide();
+          $("#beach").hide();
+          $("#activity").fadeToggle("8000");
+          $("#honeymoon").hide();
+        });
+      });
+      $(document).ready(function(){
+        $(".card-4").click(function(){
+          $("#plongee").hide();
+          $("#beach").hide();
+          $("#activity").hide();
+          $("#honeymoon").fadeToggle("8000");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <%= yield %>
+    <script>
+  $(document).ready(function(){
+    //Check if the current URL contains '# or hash'
+    if(document.URL.indexOf("#")==-1){
+        // Set the URL to whatever it was plus "#loaded".
+        url = document.URL+"#loaded";
+        location = "#loaded";
+        //Reload the page using reload() method
+        location.reload(true);
+    }
+});
+  </script>
+  </body>
+</html>
